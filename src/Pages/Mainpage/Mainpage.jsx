@@ -55,6 +55,8 @@ export default function Mainpage() {
       )
     );
     setSelectedFriend(null);
+
+    console.log(friends);
   };
   return (
     <>
@@ -72,7 +74,7 @@ export default function Mainpage() {
             {showAddFriend ? "Close" : "Add Friend"}
           </Button>
         </div>
-        <div class="bill-form">
+        <div className="bill-form">
           {selectedFriend && (
             <BillForm
               selectedFriend={selectedFriend}
