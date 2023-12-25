@@ -17,13 +17,13 @@ export default function Mainpage() {
       id: 933372,
       name: "Sobuj",
       image: "/sobuj.jpg",
-      balance: -200,
+      balance: 200,
     },
     {
       id: 499476,
       name: "Sagor",
       image: "/sagor.jpg",
-      balance: 150,
+      balance: -150,
     },
   ];
 
@@ -55,8 +55,6 @@ export default function Mainpage() {
       )
     );
     setSelectedFriend(null);
-
-    console.log(friends);
   };
   return (
     <>
@@ -79,6 +77,7 @@ export default function Mainpage() {
             <BillForm
               selectedFriend={selectedFriend}
               onBillSplit={handleBillSplit}
+              friends={friends}
             />
           )}
         </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../Button/Button";
 
-export default function BillForm({ selectedFriend, onBillSplit }) {
+export default function BillForm({ selectedFriend, onBillSplit, friends }) {
   const [bill, setBill] = useState("");
   const [paidByUser, setPaidByUser] = useState("");
   const paidByFriend = bill ? bill - paidByUser : "";
@@ -13,6 +13,7 @@ export default function BillForm({ selectedFriend, onBillSplit }) {
     if (!bill || !paidByUser) return;
 
     onBillSplit(whoIsPaying === "user" ? paidByFriend : -paidByFriend);
+    console.log(friends);
   };
   return (
     <form action="#" className="form-split-bill" onSubmit={handleSubmit}>
