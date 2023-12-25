@@ -5,28 +5,28 @@ import Button from "../../Components/Button/Button";
 import Friendslist from "../../Components/Friendslist/Friendslist";
 import "./Mainpage.css";
 
-export default function Mainpage() {
-  const initialFriends = [
-    {
-      id: 118836,
-      name: "Talha",
-      image: "/talha.jpg",
-      balance: 0,
-    },
-    {
-      id: 933372,
-      name: "Sobuj",
-      image: "/sobuj.jpg",
-      balance: 200,
-    },
-    {
-      id: 499476,
-      name: "Sagor",
-      image: "/sagor.jpg",
-      balance: -150,
-    },
-  ];
+const initialFriends = [
+  {
+    id: 118836,
+    name: "Talha",
+    image: "/talha.jpg",
+    balance: 0,
+  },
+  {
+    id: 933372,
+    name: "Sobuj",
+    image: "/sobuj.jpg",
+    balance: 200,
+  },
+  {
+    id: 499476,
+    name: "Sagor",
+    image: "/sagor.jpg",
+    balance: -150,
+  },
+];
 
+export default function Mainpage() {
   const [showAddFriend, setShowAddFriend] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
   const [selectedFriend, setSelectedFriend] = useState(null);

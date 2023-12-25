@@ -5,14 +5,14 @@ export default function BillForm({ selectedFriend, onBillSplit, friends }) {
   const [bill, setBill] = useState("");
   const [paidByUser, setPaidByUser] = useState("");
   const paidByFriend = bill ? bill - paidByUser : "";
-  const [whoIsPaying, setWhoIsPaying] = useState("");
+  const [whoIsPaying, setWhoIsPaying] = useState("user");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!bill || !paidByUser) return;
 
-    onBillSplit(whoIsPaying === "user" ? paidByFriend : -paidByFriend);
+    onBillSplit(whoIsPaying === "user" ? paidByFriend : -paidByUser);
     console.log(friends);
   };
   return (
